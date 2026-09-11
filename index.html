@@ -1,0 +1,85 @@
+<!DOCTYPE html>   <!-- diz ao navegador que é HTML5 -->
+<html lang="pt-br">   <!-- raiz da página, idioma português -->
+  <head>  <!-- cabeça: configurações invisíveis -->
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+      
+      body {
+      background-color: #ffb8c2;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      }
+      #calculadora {
+        width: fit-content;
+        margin: 0 auto;
+        background-color: white;
+        border-radius: 20px;
+        padding: 20px;
+        outline: 3px dotted #D66AA0;
+        outline-offset: -10px;
+      }
+      #tela {
+        background-color: #D66AA0;
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: right;
+        font-size: 24px;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        font-family: 'Share Tech Mono', monospace;
+        color: white;
+      }
+      #botoes {
+      display: grid;
+      grid-template-columns: repeat(4, 65px);
+      gap: 5px;
+      }
+
+      #botoes button {
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      font-family: 'Share Tech Mono', monospace;
+      font-weight: bold;
+      color: #7A1765;
+      font-size: 18px;
+      }
+    </style>
+    <meta charset="UTF-8">  <!-- aceita acentos e caracteres especiais -->
+    <title>Minha Calculadora</title> <!-- nome que aparece na aba do navegador -->
+  </head>
+  <body> <!-- corpo: tudo que aparece na tela -->
+
+    <div id="calculadora"> <!-- caixa externa que envolve tudo -->
+
+      <div id="tela">0</div> <!-- tela que mostra os números -->
+
+      <div id="botoes"> <!-- caixa que agrupa todos os botões -->
+        <button>7</button> <!-- botão com número 7 -->
+        <button>8</button>
+        <button>9</button>
+        <button>+</button> <!-- botão de operação -->
+
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>-</button>
+
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>*</button> <!-- multiplicação -->
+
+        <button>0</button>
+        <button>C</button> <!-- limpa a tela -->
+        <button>=</button> <!-- calcula o resultado -->
+        <button>/</button> <!-- divisão -->
+      </div>
+
+    </div>
+
+  </body>
+</html>
