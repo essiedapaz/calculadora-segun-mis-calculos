@@ -1,0 +1,33 @@
+const tela = document.getElementById("tela");
+const botoes = document.querySelectorAll("#botoes button");
+
+let expressao = "";
+
+botoes.forEach(function (botao) {
+  botao.addEventListener("click", function () {
+    const valor = botao.textContent;
+
+    console.log("clicou:", JSON.stringify(valor));
+
+    if (valor === "C") {
+      expressao = "";
+      tela.textContent = "0";
+      return;
+    }
+
+    if (valor === "=") {
+      console.log("fita:", JSON.stringify(expressao));
+      try {
+        expressao = String(eval(expressao));
+        tela.textContent = expressao;
+      } catch (erro) {
+        tela.textContent = "Erro";
+        expressao = "";
+      }
+      return;
+    }
+
+    expressao = expressao + valor;
+    tela.textContent = expressao;
+  });
+});
