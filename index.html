@@ -4,15 +4,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
       
-      body {
-      background-color: #ffb8c2;
+      body { /* corpo da página */
+      background-color: #f2a7b8;
+      background-image: url('jornal-fundo.jpg');
       background-size: cover;
+      background-blend-mode: multiply;
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
       }
-      #calculadora {
+      #calculadora { /* caixa externa que envolve tudo */
         width: fit-content;
         margin: 0 auto;
         background-color: white;
@@ -20,8 +22,16 @@
         padding: 20px;
         outline: 3px dotted #D66AA0;
         outline-offset: -10px;
+        box-shadow: 0 10px 30px rgba(122, 23, 101, 0.25);
       }
-      #tela {
+      #calculadora h1 { /* título da calculadora */
+        font-family: 'Share Tech Mono', monospace;
+        color: #7A1765;
+        font-size: 20px;
+        text-align: center;
+        margin: 0 0 15px 0;
+      }
+      #tela { /* tela que mostra os números */
         background-color: #D66AA0;
         border: 1px solid #ccc;
         padding: 10px;
@@ -32,29 +42,88 @@
         font-family: 'Share Tech Mono', monospace;
         color: white;
       }
-      #botoes {
+      #botoes {  /* caixa que agrupa todos os botões */
       display: grid;
-      grid-template-columns: repeat(4, 65px);
+      grid-template-columns: repeat(4, 70px);
       gap: 5px;
       }
-
-      #botoes button {
-      width: 65px;
-      height: 65px;
+      #botoes button {  /* estilo dos botões */
+      width: 70px;
+      height: 70px;
       border-radius: 50%;
       font-family: 'Share Tech Mono', monospace;
       font-weight: bold;
       color: #7A1765;
       font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0; 
+      }
+      #botoes button:hover { /* efeito de hover */
+        background-color: #fff0f6;
+      }
+      #botoes button:active { /* efeito de clique */
+        transform: translateY(3px);
+        box-shadow: 0 0 0 #d9b3c7;
+      }
+      #botoes button:nth-child(4n) { /* seleciona os botões de operação */
+        background-color: #D66AA0;
+        color: white;
+        box-shadow: 0 3px 0 #a84c7c;
+      }
+      .sticker { /* estilo dos adesivos decorativos */
+        position: absolute;
+        z-index: 2;
+        pointer-events: none;
+        filter: drop-shadow(3px 4px 3px rgba(26,26,26,0.35));
+      }
+      .st1 { top: 6%;     left: 5%;    width: 260px; transform: rotate(-12deg); }
+      .st2 { bottom: 10%; left: 10%;   width: 180px; transform: rotate(14deg); }
+      .st3 { top: 12%;    right: 6%;   width: 200px; transform: rotate(-8deg); }
+      .st4 { bottom: 6%;  right: 8%;   width: 340px; transform: rotate(-4deg); }
+      .txtsticker { /* estilo dos textos decorativos */
+        position: absolute;
+        z-index: 2;
+        pointer-events: none;
+        user-select: none;
+        font-family: 'Share Tech Mono', monospace;
+        font-weight: bold;
+        background-color: #ffb8d9;
+        color: #1a1a1a;
+        border: 4px solid #1a1a1a;
+        padding: 10px 16px;
+        border-radius: 10px;
+        box-shadow: 4px 4px 0 rgba(26,26,26,0.45);
+      }
+      .ts1 { top: 9%;     left: 5%;    font-size: 44px; padding: 6px 14px; transform: rotate(-16deg); }
+      .ts2 { top: 26%;    left: 24%;   font-size: 20px; transform: rotate(10deg); }
+      .ts3 { top: 3%;     right: 27%;  font-size: 26px; transform: rotate(-9deg); }
+      .ts4 { top: 46%;    right: 24%;  font-size: 18px; transform: rotate(7deg); }
+      .ts5 { bottom: 14%; left: 26%;   font-size: 40px; padding: 6px 14px; transform: rotate(-13deg); }
+      .ts6 { bottom: 4%;  left: 3%;    font-size: 30px; transform: rotate(12deg); }
+      .ts3, .ts6 {
+        background-color: #1a1a1a;
+        color: #ffb8d9;
+        border-color: #ffb8d9;
       }
     </style>
     <meta charset="UTF-8">  <!-- aceita acentos e caracteres especiais -->
-    <title>Minha Calculadora</title> <!-- nome que aparece na aba do navegador -->
+    <title>Según mis Cálculos</title> <!-- nome que aparece na aba do navegador -->
   </head>
   <body> <!-- corpo: tudo que aparece na tela -->
-
+    <img src="heart.png"     class="sticker st1" alt="">
+    <img src="phone.png"     class="sticker st2" alt="">
+    <img src="smile.png"     class="sticker st3" alt="">
+    <img src="heart.png" class="sticker st4" alt="">
+    <div class="txtsticker ts1">★</div>
+    <div class="txtsticker ts2">eval()</div>
+    <div class="txtsticker ts3">NaN</div>
+    <div class="txtsticker ts4">math is fake</div>
+    <div class="txtsticker ts5">✷</div>
+    <div class="txtsticker ts6">404</div>
     <div id="calculadora"> <!-- caixa externa que envolve tudo -->
-
+      <h1>˙⋆✮ Según mis Cálculos ✮⋆˙</h1> <! -- título da calculadora -->
       <div id="tela">0</div> <!-- tela que mostra os números -->
 
       <div id="botoes"> <!-- caixa que agrupa todos os botões -->
