@@ -7,16 +7,13 @@ botoes.forEach(function (botao) {
   botao.addEventListener("click", function () {
     const valor = botao.textContent;
 
-    console.log("clicou:", JSON.stringify(valor));
-
     if (valor === "C") {
       expressao = "";
       tela.textContent = "0";
       return;
     }
-
     if (valor === "=") {
-      console.log("fita:", JSON.stringify(expressao));
+
       try {
         expressao = String(eval(expressao));
         tela.textContent = expressao;
