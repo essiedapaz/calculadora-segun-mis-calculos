@@ -1,6 +1,6 @@
 # ⋆ Según mis Cálculos ⋆
 
-Uma calculadora funcional feita do zero com HTML, CSS e JavaScript puro — 
+Uma calculadora funcional feita do zero com HTML, CSS e JavaScript puro
 sem framework, sem biblioteca, sem tutorial copiado.
 
 🔗 **[Abrir a calculadora](https://essiedapaz.github.io/calculadora-segun-mis-calculos/)**
@@ -31,7 +31,7 @@ A parte difícil não foi o código.
 
 Foi aprender a lidar com a frustração e continuar mesmo quando eu não sabia 
 como fazer algo, ou quando o resultado não ficava como eu queria. Fechei o 
-laptop insatisfeita mais de uma vez — e voltei no dia seguinte.
+laptop insatisfeita mais de uma vez e voltei no dia seguinte.
 
 Tecnicamente, os momentos que mais ensinaram:
 
@@ -52,7 +52,7 @@ O cálculo usa `eval()`. Funciona porque a entrada só vem dos 16 botões, mas
 não seria aceitável com entrada livre do usuário. Trocar por lógica própria 
 é o próximo exercício.
 
-Os adesivos respondem a mouse, não a toque — falta suporte mobile.
+Os adesivos respondem a mouse, não a toque, falta suporte mobile.
 
 ## Créditos
 
