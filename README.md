@@ -41,7 +41,7 @@ Tecnicamente, os momentos que mais ensinaram:
 - **Chaves não são indentação.** Colei um bloco de código alinhado 
   corretamente, mas dentro do `forEach` errado. O JavaScript obedece as 
   chaves, não o alinhamento.
-- **CSS não substitui, empilha.** Blocos duplicados não se cancelam — a 
+- **CSS não substitui, empilha.** Blocos duplicados não se cancelam a 
   última declaração vence, e as propriedades antigas sobrevivem.
 - **Saber cortar.** Cheguei a ter 17 elementos decorativos. Tirar foi mais 
   difícil que colocar.
@@ -57,7 +57,7 @@ Os adesivos respondem a mouse, não a toque, falta suporte mobile.
 ## Créditos
 
 Textura de fundo: [Texturelabs](https://texturelabs.org/)  
-Adesivos: [COMPLETAR COM A FONTE]
+Adesivos: [Magnific] https://www.magnific.com/br
 
 ---
 
