@@ -5,7 +5,7 @@
     <style>
       
       body { /* corpo da página */
-      background-color: #f2a7b8;
+      background-color: #e8b4e8;
       background-image: url('jornal-fundo.jpg');
       background-size: cover;
       background-blend-mode: multiply;
@@ -17,30 +17,31 @@
       #calculadora { /* caixa externa que envolve tudo */
         width: fit-content;
         margin: 0 auto;
-        background-color: white;
+        background-color: #fdf4ff;
+        border: 5px solid #1a1a1a;
         border-radius: 20px;
         padding: 20px;
-        outline: 3px dotted #D66AA0;
+        outline: 3px dotted #c9a7f0;
         outline-offset: -10px;
         box-shadow: 0 10px 30px rgba(122, 23, 101, 0.25);
       }
       #calculadora h1 { /* título da calculadora */
         font-family: 'Share Tech Mono', monospace;
-        color: #7A1765;
+        color: #1a1a1a;
         font-size: 20px;
         text-align: center;
         margin: 0 0 15px 0;
       }
       #tela { /* tela que mostra os números */
-        background-color: #D66AA0;
-        border: 1px solid #ccc;
+        background-color: #C9A7F0;
+        border: 4px solid #1A1A1A;
         padding: 10px;
         text-align: right;
         font-size: 24px;
         border-radius: 10px;
         margin-bottom: 15px;
         font-family: 'Share Tech Mono', monospace;
-        color: white;
+        color:#1A1A1A;
       }
       #botoes {  /* caixa que agrupa todos os botões */
       display: grid;
@@ -53,55 +54,72 @@
       border-radius: 50%;
       font-family: 'Share Tech Mono', monospace;
       font-weight: bold;
-      color: #7A1765;
+      color: #1a1a1a;
       font-size: 18px;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 0; 
+      padding: 0;
+      box-shadow: 0 3px 0 #d9b3c7; 
       }
       #botoes button:hover { /* efeito de hover */
-        background-color: #fff0f6;
+        background-color: #ffffff;
       }
       #botoes button:active { /* efeito de clique */
-        transform: translateY(3px);
-        box-shadow: 0 0 0 #d9b3c7;
+        transform: translateY(4px);
+        box-shadow: 0 0 0 #1A1A1A;
       }
       #botoes button:nth-child(4n) { /* seleciona os botões de operação */
-        background-color: #D66AA0;
+        background-color: #c066ca;
         color: white;
-        box-shadow: 0 3px 0 #a84c7c;
+        box-shadow: 0 3px 0 #a34ca8;
       }
       .sticker { /* estilo dos adesivos decorativos */
         position: absolute;
         z-index: 2;
-        pointer-events: none;
+        pointer-events: auto; /* permite interação com o mouse */
+        cursor: grab; /* muda o cursor para indicar que pode ser arrastado */
+        max-width: 200px;
         filter: drop-shadow(3px 4px 3px rgba(26,26,26,0.35));
       }
-      .st1 { top: 6%;     left: 5%;    width: 260px; transform: rotate(-12deg); }
-      .st2 { bottom: 10%; left: 10%;   width: 180px; transform: rotate(14deg); }
-      .st3 { top: 12%;    right: 6%;   width: 200px; transform: rotate(-8deg); }
-      .st4 { bottom: 6%;  right: 8%;   width: 340px; transform: rotate(-4deg); }
+      .st1 { top: 4%;    left: 5.4%;  width: 120px; transform: rotate(-12deg); }
+      .st2 { top: 62%;   left: 7%;    width: 90px;  transform: rotate(14deg); }
+      .st3 { top: 0.4%;  left: 60.6%; width: 100px; transform: rotate(-8deg); }
+      .st4 { top: 83.4%; left: 38.7%; width: 160px; transform: rotate(-4deg); }
+
       .txtsticker { /* estilo dos textos decorativos */
         position: absolute;
         z-index: 2;
-        pointer-events: none;
+        pointer-events: auto; /* permite interação com o mouse */
+        cursor: grab; /* muda o cursor para indicar que pode ser arrastado */
         user-select: none;
         font-family: 'Share Tech Mono', monospace;
         font-weight: bold;
-        background-color: #ffb8d9;
+        background-color: #f1b8ff;
         color: #1a1a1a;
         border: 4px solid #1a1a1a;
         padding: 10px 16px;
         border-radius: 10px;
         box-shadow: 4px 4px 0 rgba(26,26,26,0.45);
       }
-      .ts1 { top: 9%;     left: 5%;    font-size: 44px; padding: 6px 14px; transform: rotate(-16deg); }
-      .ts2 { top: 26%;    left: 24%;   font-size: 20px; transform: rotate(10deg); }
-      .ts3 { top: 3%;     right: 27%;  font-size: 26px; transform: rotate(-9deg); }
-      .ts4 { top: 46%;    right: 24%;  font-size: 18px; transform: rotate(7deg); }
-      .ts5 { bottom: 14%; left: 26%;   font-size: 40px; padding: 6px 14px; transform: rotate(-13deg); }
-      .ts6 { bottom: 4%;  left: 3%;    font-size: 30px; transform: rotate(12deg); }
+      .st1  { top: 3%;   left: 4%;   width: 95px;  transform: rotate(-12deg); }
+      .st2  { top: 20%;  left: 2%;   width: 75px;  transform: rotate(14deg); }
+      .st3  { top: 44%;  left: 3%;   width: 85px;  transform: rotate(-8deg); }
+      .st4  { top: 68%;  left: 5%;   width: 90px;  transform: rotate(6deg); }
+      .st5  { top: 86%;  left: 18%;  width: 80px;  transform: rotate(-15deg); }
+      .st6  { top: 2%;   left: 30%;  width: 85px;  transform: rotate(9deg); }
+      .st7  { top: 4%;   left: 72%;  width: 90px;  transform: rotate(-6deg); }
+      .st8  { top: 24%;  left: 84%;  width: 100px; transform: rotate(11deg); }
+      .st9  { top: 50%;  left: 86%;  width: 85px;  transform: rotate(-9deg); }
+      .st10 { top: 72%;  left: 80%;  width: 95px;  transform: rotate(7deg); }
+      .st11 { top: 88%;  left: 62%;  width: 110px; transform: rotate(-4deg); }
+
+      .ts1 { top: 12%;  left: 14%; font-size: 36px; padding: 6px 14px; transform: rotate(-16deg); }
+      .ts2 { top: 34%;  left: 12%; font-size: 18px; transform: rotate(10deg); }
+      .ts3 { top: 10%;  left: 76%; font-size: 24px; transform: rotate(-9deg); }
+      .ts4 { top: 60%;  left: 74%; font-size: 16px; transform: rotate(7deg); }
+      .ts5 { top: 80%;  left: 8%;  font-size: 34px; padding: 6px 14px; transform: rotate(-13deg); }
+      .ts6 { top: 36%;  left: 82%; font-size: 26px; transform: rotate(12deg); }
       .ts3, .ts6 {
         background-color: #1a1a1a;
         color: #ffb8d9;
@@ -112,10 +130,17 @@
     <title>Según mis Cálculos</title> <!-- nome que aparece na aba do navegador -->
   </head>
   <body> <!-- corpo: tudo que aparece na tela -->
-    <img src="heart.png"     class="sticker st1" alt="">
-    <img src="phone.png"     class="sticker st2" alt="">
+    <img src="alien.png"     class="sticker st1" alt="">
+    <img src="star.png"      class="sticker st2" alt="">
     <img src="smile.png"     class="sticker st3" alt="">
-    <img src="heart.png" class="sticker st4" alt="">
+    <img src="heart.png"     class="sticker st4" alt="">
+    <img src="kiss.png"      class="sticker st5" alt="">
+    <img src="pixel.png"     class="sticker st6" alt="">
+    <img src="void.png"      class="sticker st7" alt="">
+    <img src="wings.png"     class="sticker st8" alt="">
+    <img src="collar.png"    class="sticker st9" alt="">
+    <img src="dimond.png"    class="sticker st10" alt="">
+    <img src="cutie.png"     class="sticker st11" alt="">
     <div class="txtsticker ts1">★</div>
     <div class="txtsticker ts2">eval()</div>
     <div class="txtsticker ts3">NaN</div>
